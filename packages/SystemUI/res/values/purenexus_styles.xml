@@ -37,6 +37,7 @@
 
     <!-- Battery meter drawable styles -->
     <style name="BatteryMeterViewDrawable.Portrait"/>
+    <style name="BatteryMeterViewDrawable.Landscape"/>
     <style name="BatteryMeterViewDrawable.Circle"/>
 
     <!-- Pixel home dot style -->

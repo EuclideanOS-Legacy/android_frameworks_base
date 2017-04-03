@@ -61,7 +61,8 @@ public class BatteryMeterDrawable extends Drawable implements
     public static final int BATTERY_STYLE_PORTRAIT  = 0;
     public static final int BATTERY_STYLE_CIRCLE    = 2;
     public static final int BATTERY_STYLE_HIDDEN    = 4;
-    public static final int BATTERY_STYLE_TEXT      = 5;
+    public static final int BATTERY_STYLE_LANDSCAPE = 5;
+    public static final int BATTERY_STYLE_TEXT      = 6;
 
     private final Context mContext;
     private final Handler mHandler;
@@ -468,6 +469,8 @@ public class BatteryMeterDrawable extends Drawable implements
 
     private int getBatteryDrawableResourceForStyle(final int style) {
         switch (style) {
+            case BATTERY_STYLE_LANDSCAPE:
+                return R.drawable.ic_battery_landscape;
             case BATTERY_STYLE_CIRCLE:
                 return R.drawable.ic_battery_circle;
             case BATTERY_STYLE_PORTRAIT:
@@ -479,6 +482,8 @@ public class BatteryMeterDrawable extends Drawable implements
 
     private int getBatteryDrawableStyleResourceForStyle(final int style) {
         switch (style) {
+            case BATTERY_STYLE_LANDSCAPE:
+                return R.style.BatteryMeterViewDrawable_Landscape;
             case BATTERY_STYLE_CIRCLE:
                 return R.style.BatteryMeterViewDrawable_Circle;
             case BATTERY_STYLE_PORTRAIT:
